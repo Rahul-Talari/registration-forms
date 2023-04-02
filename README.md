@@ -1,0 +1,1 @@
+This Git repository contains registration forms created for faculty and HR using HTML, CSS, and JavaScript. The faculty can enter, edit, and delete data and save it for later submission. The HR will then check whether the faculty has logged in or not and fill out the remaining data.
