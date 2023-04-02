@@ -1,0 +1,1137 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <title>Faculty</title>
+</head>
+
+<body>
+    <br>
+    <div>
+        <div><img src="C:\Users\user\Desktop\faculty\gvp banner.jpg" style="display: block; margin-left: auto; margin-right: auto;" /><br></div>
+        <div>
+            <span>
+        <nav>
+          <div>
+            <ul class="nav-links">
+              <li><a href="enterdata.html">Enter data</a></li>
+              <li><a href="editdata.html">Edit data</a></li>
+              <li><a href="viewdata.html">View data</a></li>
+            </ul>
+          </div>
+        </nav>
+      </span>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>Registration</header>
+
+        <form action="#">
+            <div class="Title" id="details">
+                <span class="title">Personal Details</span>
+
+                <div class="fields">
+
+                    <div class="input-field">
+                        <label>Title</label>
+                        <select required>
+              <option disabled selected>Select Title</option>
+              <option>Dr</option>
+              <option>Miss</option>
+              <option>Mr</option>
+              <option>Mrs</option>
+              <option>Others</option>
+            </select>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Faculty id</label>
+                        <input type="text" placeholder="Enter your id">
+                    </div>
+
+                    <div class="input-field">
+                        <label>First Name</label>
+                        <input type="text" placeholder="Enter your name" id="fname" onkeyup="namevalid(id)" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Enter your name" id="lname" onkeyup="namevalid(id)" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Gender</label>
+                        <select required>
+              <option disabled selected>Select gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Others</option>
+            </select>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Father's Name</label>
+                        <input type="text" placeholder="Enter your father name" id="faname" onkeyup="namevalid(id)" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Mother's Name</label>
+                        <input type="text" placeholder="Enter your mother name" id="moname" onkeyup="namevalid(id)" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Date of Birth</label>
+                        <input type="date" placeholder="Enter birth date" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Religion</label>
+                        <input type="text" placeholder="Enter the religion" id="religion" onkeyup="namevalid(id)" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Caste</label>
+                        <select required>
+              <option disabled selected>Select gender</option>
+              <option>OC</option>
+              <option>BC</option>
+              <option>OBC</option>
+              <option>SC</option>
+              <option>ST</option>
+            </select>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Address</label>
+                        <input type="text" placeholder="Enter your address" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Postal Code</label>
+                        <input type="num" placeholder="Enter Postal Code" maxlength="6" id="pincode" onfocusout="pincodevalid(id)" required>
+                    </div>
+
+
+                    <div class="input-field">
+                        <label>Country</label>
+                        <select id="country" name="country" class="form-control">
+              <option value="India">India</option>
+              <option value="Afghanistan">Afghanistan</option>
+              <option value="Åland Islands">Åland Islands</option>
+              <option value="Albania">Albania</option>
+              <option value="Algeria">Algeria</option>
+              <option value="American Samoa">American Samoa</option>
+              <option value="Andorra">Andorra</option>
+              <option value="Angola">Angola</option>
+            </select>
+                    </div>
+
+
+                    <div class="input-field">
+                        <label>State</label>
+                        <select id="country-state" name="country-state" required>
+              <option value="AN">Andaman and Nicobar Islands</option>
+              <option value="AP">Andhra Pradesh</option>
+              <option value="AR">Arunachal Pradesh</option>
+              <option value="AS">Assam</option>
+              <option value="BR">Bihar</option>
+              <option value="CH">Chandigarh</option>
+              <option value="CT">Chhattisgarh</option>
+              <option value="DN">Dadra and Nagar Haveli</option>
+              <option value="DD">Daman and Diu</option>
+              <option value="DL">Delhi</option>
+              <option value="GA">Goa</option>
+              <option value="GJ">Gujarat</option>
+              <option value="HR">Haryana</option>
+              <option value="HP">Himachal Pradesh</option>
+              <option value="JK">Jammu and Kashmir</option>
+              <option value="JH">Jharkhand</option>
+              <option value="KA">Karnataka</option>
+            </select>
+                    </div>
+
+                    <div class="input-field">
+                        <label>District</label>
+                        <input type="text" placeholder="Enter your District" required>
+                    </div>
+
+
+                    <div class="input-field">
+                        <label>City/Village</label>
+                        <input type="text" placeholder="Enter your City/Village" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>STD Code</label>
+                        <input type="text" placeholder="Enter your STD Code">
+                    </div>
+
+
+                    <div class="input-field">
+                        <label>Landline</label>
+                        <input type="text" placeholder="Enter your Landline">
+                    </div>
+
+                    <div class="input-field">
+                        <label>Mobile Phone</label>
+                        <input type="tel" placeholder="Enter your Mobile Phone" maxlength="10" id="mobile" onfocusout="mobilevalid(id)" required>
+                    </div>
+
+
+                    <div class="input-field">
+                        <label>Fax Phone</label>
+                        <input type="tel" placeholder="Enter your Fax Phone">
+                    </div>
+
+                    <div class="input-field">
+                        <label>Email address</label>
+                        <input type="email" placeholder="Enter your Email address" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Alternate email address</label>
+                        <input type="email" placeholder="Enter your Alternate email address">
+                    </div>
+
+                    <div class="input-field">
+                        <label>Aadhar Card UID</label>
+                        <input type="num" placeholder="Enter your Adhaar Card UID" maxlength="12" id="aadhar" onfocusout="aadharvalid(id)" required>
+                    </div>
+
+
+                    <div class="input-field">
+                        <label>PAN Number</label>
+                        <input type="text" maxlength="10" placeholder="Enter your PAN number" id="pannumber" onfocusout="pannumbervalid(id)" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Passport Number</label>
+                        <input type="text" placeholder="Enter your Passport Number">
+                    </div>
+                </div><br>
+
+
+
+
+
+
+
+                <br><br><span class="title">Educational Details</span>
+                <div class="fields">
+
+                    <div class="input-field">
+                        <label>PG Degree</label>
+                        <input type="text" placeholder="Enter PG degree" id="pgdegree" onkeyup="namevalid(id)" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label> Area of specialization</label>
+                        <input type="text" placeholder="Enter Area of specialization" id="specialization" onkeyup="namevalid(id)" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>UG Degree</label>
+                        <input type="text" placeholder="Enter UG degree" id="ugdegree" onkeyup="namevalid(id)" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Doctorate Degree</label>
+                        <select required>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Number of Other Qualifications</label>
+                        <select>
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+                    </div>
+                </div>
+
+                <div class="input-field">
+                    <label>Other Qualifications</label><br>
+                    <input type="text" id="tag-input1" size="100">
+                </div>
+
+                <br><br><br><span class="title">Experience Details</span>
+                <div class="fields">
+
+                    <div class="input-field">
+                        <label>Teaching Experience in Years</label>
+                        <input type="number" placeholder="Teaching Experience in Years" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Research experience in years</label>
+                        <input type="number" placeholder="Research experience in years" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Industry experience in years</label>
+                        <input type="number" placeholder="Industry experience in years" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Other experience in years</label>
+                        <input type="number" placeholder="Other experience in years" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Total experience in years</label>
+                        <input type="number" placeholder="Total experience in years" required>
+                    </div>
+                </div>
+
+                <br><br><br><span class="title">Other Details</span>
+                <div class="fields">
+
+                    <div class="input-field">
+                        <label>Bank Account Holder's Name</label>
+                        <input type="text" placeholder="Enter bank account Holder's Name" id="bankholdname" onkeyup="namevalid(id)" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Bank Account Number</label>
+                        <input type="number" placeholder="Enter bank account number" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>IFSC Code</label>
+                        <input type="number" placeholder="Enter IFSC Code" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Bank Name</label>
+                        <input type="text" placeholder="Enter bank name" id="bankname" onkeyup="namevalid(id)" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Bank Branch Name</label>
+                        <input type="text" placeholder="Enter bank branch name" id="bankbranchname" onkeyup="namevalid(id)" vrequired>
+                    </div>
+
+                </div>
+
+
+                <div class="fields">
+
+
+                    <div class="input-field">
+                        <label>First Year/Common Subject Teacher</label>
+                        <select required>
+              <option>First year </option>
+              <option>Common subject</option>
+            </select>
+                    </div>
+
+
+
+
+                    <div class="input-field">
+                        <label>Would you like to work as Expert Member on various committes of AICTE</label>
+                        <select required>
+              <option>YES</option>
+              <option>NO</option>
+            </select>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Have you ever applied to AICTE for any grants / Assistance </label>
+                        <select required>
+              <option>YES</option>
+              <option>NO</option>
+            </select>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Physically handicapped</label>
+                        <select required>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+                    </div>
+
+                    <div class="input-field">
+                        <label>No. of patent</label>
+                        <input type="number" placeholder="No. of patent">
+                    </div>
+
+                    <div class="input-field">
+                        <label>No. of PG Projects Guided</label>
+                        <input type="number" placeholder="Enter no. of PG Projects Guided">
+                    </div>
+
+                    <div class="input-field">
+                        <label>No. of Books published</label>
+                        <input type="number" placeholder="Enter no. of Books published">
+                    </div>
+                    <div class="input-field">
+                        <label>No. of Doctorate students guided</label>
+                        <input type="number" placeholder="Enter no. of Doctorate students guided">
+                    </div>
+                    <div class="input-field">
+                        <label>No. of Publications in National Journals</label>
+                        <input type="number" placeholder="Enter no. of Publications in National Journals">
+                    </div>
+                    <div class="input-field">
+                        <label>No. of Publications in International Journals</label>
+                        <input type="number" placeholder="Enter no. of Publications in International Journals">
+                    </div>
+
+                    <div class="input-field">
+                        <label>No. of publications in National Conferences</label>
+                        <input type="number" placeholder="Enter no. of publications in National Conferences">
+                    </div>
+
+                    <div class="input-field">
+                        <label>No. of publications in International Conferences</label>
+                        <input type="number" placeholder="Enter no. of publications in International Conferences">
+                    </div>
+                    <div class="input-field">
+
+                    </div>
+                    <div class="input-field">
+
+                    </div>
+                    <div class="input-field">
+
+                    </div>
+                </div>
+
+
+                <div class="input-field">
+                    <label>Patents</label><br>
+                    <input type="text" id="tag-input2" size="100">
+                </div><br>
+
+                <div class="input-field">
+                    <label>PG Projects Guided</label><br>
+                    <input type="text" id="tag-input3" size="100">
+                </div><br>
+
+                <div class="input-field">
+                    <label>Books published</label><br>
+                    <input type="text" id="tag-input4" size="100">
+                </div><br>
+                <div class="input-field">
+                    <label>Doctorate students guided</label><br>
+                    <input type="text" id="tag-input5" size="100">
+                </div><br>
+                <div class="input-field">
+                    <label>Publications in National Journals</label><br>
+                    <input type="text" id="tag-input6" size="100">
+                </div><br>
+                <div class="input-field">
+                    <label>Publications in International Journals</label><br>
+                    <input type="text" id="tag-input7" size="100">
+                </div><br>
+
+                <div class="input-field">
+                    <label>publications in National Conferences</label><br>
+                    <input type="text" id="tag-input8" size="100">
+                </div><br>
+
+                <div class="input-field">
+                    <label>publications in International Conferences</label><br>
+                    <input type="text" id="tag-input9" size="100">
+                </div><br>
+                <br>
+
+
+                <div class="divscroll">
+                    <table class="input-field">
+                        <tr>
+                            <th><label>Qualifications</label></th>
+                            <th><label>Year of Passing</label></th>
+                            <th><label>University</label></th>
+                            <th><label>Institute</label></th>
+                            <th><label>Percentage of Marks</label></th>
+                            <th><label>Mode</label></th>
+                            <th><label>Area of specialization</label></th>
+                            <th><label>Projects guided</label></th>
+                        </tr>
+                        <tr>
+                            <th><label>PHD</label></th>
+                            <td><input type="text" />
+                                <td><input type="text" /></td>
+                                <td><input type="text" /></td>
+                                <td><input type="text" /></td>
+                                <td><input type="text" /></td>
+                                <td><input type="text" /></td>
+                                <td><input type="text" /></td>
+                        </tr>
+                        <tr>
+                            <th><label>Masters</label></th>
+                            <td><input type="text" />
+                                <td><input type="text" /></td>
+                                <td><input type="text" /></td>
+                                <td><input type="text" /></td>
+                                <td><input type="text" /></td>
+                                <td><input type="text" /></td>
+                                <td><input type="text" /></td>
+                        </tr>
+                        <tr>
+                            <th><label>Bachelors</label></th>
+                            <td><input type="text" />
+                                <td><input type="text" /></td>
+                                <td><input type="text" /></td>
+                                <td><input type="text" /></td>
+                                <td><input type="text" /></td>
+                                <td><input type="text" /></td>
+                                <td><input type="text" /></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <br><br><br><span class="title">Documents to be attached</span>
+                <div class="fields">
+                    <div class="input-field">
+                        <div>
+                            <label>Soft copy of passport size photograph</label><br>
+                            <input type="file" name="file" id="file">
+                        </div>
+                        <div>
+                            <button onclick="return CheckDimension()">upload</button>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <div>
+                            <label>Soft copy of passport size photograph</label><br>
+                            <input type="file" name="file" id="file">
+                        </div>
+                        <div>
+                            <button onclick="return CheckDimension()">upload</button>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <div>
+                            <label>Soft copy of PAN Card</label><br>
+                            <input type="file" name="file" id="file">
+                        </div>
+                        <div>
+                            <button onclick="return CheckDimension()">upload</button>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <div>
+                            <label>Biometric image of right thumb</label><br>
+                            <input type="file" name="file" id="file">
+                        </div>
+                        <div>
+                            <button onclick="return CheckDimension()">upload</button>
+                        </div>
+                    </div>
+
+
+                </div>
+                <br><br><br>
+
+                <button class="btn btn-info">Submit</button>
+            </div>
+        </form>
+    </div>
+    <style>
+        /* ===== Google Font Import - Poppins ===== */
+        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .form.first {
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        
+        body {
+            min-height: 300vh;
+            align-items: center;
+            justify-content: center;
+            background: #dcdbd7;
+        }
+        
+        .container {
+            position: relative;
+            max-width: 1400px;
+            width: 100%;
+            border-radius: 10px;
+            padding: 30px;
+            margin: auto;
+            background-color: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container header {
+            position: relative;
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .container header::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            height: 3px;
+            width: 27px;
+            border-radius: 8px;
+            background-color: #4070f4;
+        }
+        
+        .form.first {
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        
+        .container form {
+            position: relative;
+            margin-top: 16px;
+            min-height: 490px;
+            background-color: #fff;
+            overflow: hidden;
+        }
+        
+        .container form .form {
+            position: absolute;
+            background-color: #fff;
+            transition: 0.3s ease;
+        }
+        
+        .container form .form.second {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(100%);
+        }
+        
+        form.secActive .form.second {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(0);
+        }
+        
+        form.secActive .form.first {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(-100%);
+        }
+        
+        .container form .title {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            margin: 6px 0;
+            color: #333;
+        }
+        
+        .container form .fields {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        form .fields .input-field {
+            display: flex;
+            width: calc(100% / 5 - 15px);
+            flex-direction: column;
+            margin: 4px 0;
+        }
+        
+        .input-field label {
+            font-size: 12px;
+            font-weight: 500;
+            color: #2e2e2e;
+        }
+        
+        .form {
+            overflow-x: hidden;
+            overflow-y: auto;
+            background-color: aquamarine;
+        }
+        
+        .input-field input,
+        select {
+            outline: none;
+            font-size: 14px;
+            font-weight: 400;
+            color: #333;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+            padding: 0 15px;
+            height: 42px;
+            margin: 8px 0;
+        }
+        
+        .input-field input :focus,
+        .input-field select:focus {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+        }
+        
+        .input-field select,
+        .input-field input[type="date"] {
+            color: #707070;
+        }
+        
+        .input-field input[type="date"]:valid {
+            color: #333;
+        }
+        
+        .container form .btnText {
+            font-size: 14px;
+            font-weight: 400;
+        }
+        
+        @media (max-width: 750px) {
+            .container form {
+                overflow-y: scroll;
+            }
+            .container form::-webkit-scrollbar {
+                display: none;
+            }
+            form .fields .input-field {
+                width: calc(100% / 2 - 15px);
+            }
+        }
+        
+        @media (max-width: 550px) {
+            form .fields .input-field {
+                width: 100%;
+            }
+        }
+        
+        .tags-input-wrapper {
+            background: transparent;
+            padding: 10px;
+            border-radius: 4px;
+            max-width: 4000px;
+            border: 1px solid #ccc
+        }
+        
+        .tags-input-wrapper input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 140px;
+            margin-left: 8px;
+        }
+        
+        .tags-input-wrapper .tag {
+            display: inline-block;
+            background-color: #0c0b0e;
+            color: white;
+            border-radius: 40px;
+            padding: 0px 3px 0px 7px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            box-shadow: 0 5px 15px -2px rgba(14, 14, 14, 0.7)
+        }
+        
+        .tags-input-wrapper .tag a {
+            margin: 0 7px 3px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(6, 6, 6);
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            background-color: rgb(13, 199, 241);
+            transform: translateY(-5px);
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+        }
+        
+        .divscroll {
+            overflow-x: scroll;
+        }
+    </style>
+    <script language="Javascript">
+        function CheckDimension() {
+            //Get reference of File.
+            var fileUpload = document.getElementById("file");
+
+            //Check whether the file is valid Image.
+            var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(.jpg|.png|.gif)$");
+            if (regex.test(fileUpload.value.toLowerCase())) {
+
+                //Check whether HTML5 is supported.
+                if (typeof(fileUpload.files) != "undefined") {
+                    //Initiate the FileReader object.
+                    var reader = new FileReader();
+                    //Read the contents of Image File.
+                    reader.readAsDataURL(fileUpload.files[0]);
+                    reader.onload = function(e) {
+                        //Initiate the JavaScript Image object.
+                        var image = new Image();
+
+                        //Set the Base64 string return from FileReader as source.
+                        image.src = e.target.result;
+
+                        //Validate the File Height and Width.
+                        image.onload = function() {
+                            var height = this.height;
+                            var width = this.width;
+                            if (height > 2 || width > 2) {
+
+                                //show width and height to user
+                                document.getElementById("width").innerHTML = width;
+                                document.getElementById("height").innerHTML = height;
+                                alert("Height and Width must not exceed 200px.");
+                                return false;
+                            }
+                            alert("Uploaded image has valid Height and Width.");
+                            return true;
+                        };
+
+                    }
+                } else {
+                    alert("This browser does not support HTML5.");
+                    return false;
+                }
+            } else {
+                alert("Please select a valid Image file.");
+                return false;
+            }
+        }
+
+
+
+        (function() {
+
+            "use strict"
+
+
+            // Plugin Constructor
+            var TagsInput = function(opts) {
+                this.options = Object.assign(TagsInput.defaults, opts);
+                this.init();
+            }
+
+            // Initialize the plugin
+            TagsInput.prototype.init = function(opts) {
+                this.options = opts ? Object.assign(this.options, opts) : this.options;
+
+                if (this.initialized)
+                    this.destroy();
+
+                if (!(this.orignal_input = document.getElementById(this.options.selector))) {
+                    console.error("tags-input couldn't find an element with the specified ID");
+                    return this;
+                }
+
+                this.arr = [];
+                this.wrapper = document.createElement('div');
+                this.input = document.createElement('input');
+                init(this);
+                initEvents(this);
+
+                this.initialized = true;
+                return this;
+            }
+
+            // Add Tags
+            TagsInput.prototype.addTag = function(string) {
+
+                if (this.anyErrors(string))
+                    return;
+
+                this.arr.push(string);
+                var tagInput = this;
+
+                var tag = document.createElement('span');
+                tag.className = this.options.tagClass;
+                tag.innerText = string;
+
+                var closeIcon = document.createElement('a');
+                closeIcon.innerHTML = '&times;';
+
+                // delete the tag when icon is clicked
+                closeIcon.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var tag = this.parentNode;
+
+                    for (var i = 0; i < tagInput.wrapper.childNodes.length; i++) {
+                        if (tagInput.wrapper.childNodes[i] == tag)
+                            tagInput.deleteTag(tag, i);
+                    }
+                })
+
+
+                tag.appendChild(closeIcon);
+                this.wrapper.insertBefore(tag, this.input);
+                this.orignal_input.value = this.arr.join(',');
+
+                return this;
+            }
+
+            // Delete Tags
+            TagsInput.prototype.deleteTag = function(tag, i) {
+                tag.remove();
+                this.arr.splice(i, 1);
+                this.orignal_input.value = this.arr.join(',');
+                return this;
+            }
+
+            // Make sure input string have no error with the plugin
+            TagsInput.prototype.anyErrors = function(string) {
+                if (this.options.max != null && this.arr.length >= this.options.max) {
+                    console.log('max tags limit reached');
+                    return true;
+                }
+
+                if (!this.options.duplicate && this.arr.indexOf(string) != -1) {
+                    console.log('duplicate found " ' + string + ' " ')
+                    return true;
+                }
+
+                return false;
+            }
+
+            // Add tags programmatically 
+            TagsInput.prototype.addData = function(array) {
+                var plugin = this;
+
+                array.forEach(function(string) {
+                    plugin.addTag(string);
+                })
+                return this;
+            }
+
+            // Get the Input String
+            TagsInput.prototype.getInputString = function() {
+                return this.arr.join(',');
+            }
+
+
+            // destroy the plugin
+            TagsInput.prototype.destroy = function() {
+                this.orignal_input.removeAttribute('hidden');
+
+                delete this.orignal_input;
+                var self = this;
+
+                Object.keys(this).forEach(function(key) {
+                    if (self[key] instanceof HTMLElement)
+                        self[key].remove();
+
+                    if (key != 'options')
+                        delete self[key];
+                });
+
+                this.initialized = false;
+            }
+
+            // Private function to initialize the tag input plugin
+            function init(tags) {
+                tags.wrapper.append(tags.input);
+                tags.wrapper.classList.add(tags.options.wrapperClass);
+                tags.orignal_input.setAttribute('hidden', 'true');
+                tags.orignal_input.parentNode.insertBefore(tags.wrapper, tags.orignal_input);
+            }
+
+            // initialize the Events
+            function initEvents(tags) {
+                tags.wrapper.addEventListener('click', function() {
+                    tags.input.focus();
+                });
+
+
+                tags.input.addEventListener('keydown', function(e) {
+                    var str = tags.input.value.trim();
+
+                    if (!!(~[9, 13, 188].indexOf(e.keyCode))) {
+                        e.preventDefault();
+                        tags.input.value = "";
+                        if (str != "")
+                            tags.addTag(str);
+                    }
+
+                });
+            }
+
+
+            // Set All the Default Values
+            TagsInput.defaults = {
+                selector: '',
+                wrapperClass: 'tags-input-wrapper',
+                tagClass: 'tag',
+                max: null,
+                duplicate: false
+            }
+
+            window.TagsInput = TagsInput;
+
+        })();
+
+        var tagInput1 = new TagsInput({
+            selector: 'tag-input1',
+            duplicate: false,
+            max: 10
+        });
+        tagInput1.addData([])
+        var tagInput2 = new TagsInput({
+            selector: 'tag-input2',
+            duplicate: false,
+            max: 10
+        });
+        tagInput2.addData([])
+        var tagInput3 = new TagsInput({
+            selector: 'tag-input3',
+            duplicate: false,
+            max: 10
+        });
+        tagInput3.addData([])
+        var tagInput4 = new TagsInput({
+            selector: 'tag-input4',
+            duplicate: false,
+            max: 10
+        });
+        tagInput4.addData([])
+        var tagInput5 = new TagsInput({
+            selector: 'tag-input5',
+            duplicate: false,
+            max: 10
+        });
+        tagInput5.addData([])
+        var tagInput6 = new TagsInput({
+            selector: 'tag-input6',
+            duplicate: false,
+            max: 10
+        });
+        tagInput6.addData([])
+        var tagInput7 = new TagsInput({
+            selector: 'tag-input7',
+            duplicate: false,
+            max: 10
+        });
+        tagInput7.addData([])
+        var tagInput8 = new TagsInput({
+            selector: 'tag-input8',
+            duplicate: false,
+            max: 10
+        });
+        tagInput8.addData([])
+        var tagInput9 = new TagsInput({
+            selector: 'tag-input9',
+            duplicate: false,
+            max: 10
+        });
+        tagInput9.addData([])
+
+
+        function add(type) {
+
+            //Create an input type dynamically.
+            var element = document.createElement("input");
+
+            //Assign different attributes to the element.
+            element.setAttribute("text", type);
+
+
+            var foo = document.getElementById("fooBar");
+
+            //Append the element in page (in span).
+            foo.appendChild(element);
+
+        }
+
+        function namevalid(id) {
+            var name = document.getElementById(id).value;
+            for (i = 0; i < name.length; i++) {
+                ch = name.charAt(i);
+                if (!(ch >= 'a' && ch <= 'z') && !(ch >= 'A' && ch <= 'Z') && !(ch == ' ')) {
+                    alert('Only spaces and letters are allowed');
+                    document.getElementById(id).value = "";
+                }
+            }
+
+        }
+
+
+        function pincodevalid(id) {
+            var regName = /^[1-9]{1}[0-9]{5}$/;
+            var name = document.getElementById(id).value;
+            if (!regName.test(name)) {
+                alert('Enter valid postal code');
+                document.getElementById(id).value = "";
+            }
+        }
+
+        function aadharvalid(id) {
+            var regName = /^[2-9]{1}[0-9]{11}$/;
+            var name = document.getElementById(id).value;
+            if (!regName.test(name)) {
+                alert('Enter valid Aadhar number');
+                document.getElementById(id).value = "";
+            }
+        }
+
+        function pannumbervalid(id) {
+            var regName = /[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+            var name = document.getElementById(id).value;
+            if (!regName.test(name)) {
+                alert('Enter valid Pan number');
+                document.getElementById(id).value = "";
+            }
+        }
+
+        function mobilevalid(id) {
+            var regName = /[5-9]{1}[0-9]{9}$/;
+            var name = document.getElementById(id).value;
+            if (!regName.test(name)) {
+                alert('Enter valid mobile number');
+                document.getElementById(id).value = "";
+            }
+        }
+    </script>
+</body>
+
+</html>

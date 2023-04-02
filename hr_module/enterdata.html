@@ -1,0 +1,717 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <title>Faculty</title>
+</head>
+
+<body>
+    <br>
+    <div class="container">
+        <header>Registration</header>
+
+        <form action="#">
+            <div class="Title" id="details">
+                <span class="title">Personal Details</span>
+
+                <div class="fields">
+                    <span class="title">Details related to profession</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Exact Designation</label>
+                            <input type="text" placeholder="Enter your Exact Designation">
+                        </div>
+                        <div class="input-field">
+                            <label>Appointment type</label>
+                            <select id="appointment_type" name="" required>
+                                <option value="ft">Full time</option>
+                                <option value="pt">Part time</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Program</label>
+                            <select id="program" name="" required>
+                                <option value="eat">Engineering and Technology </option>
+                                <option value="mca">MCA</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Course</label>
+                            <input type="text" placeholder="Enter your Course">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Faculty Shift</label>
+                            <select id="faculty_shift" name="" required>
+                                <option value="">1st Shift</option>
+                                <option value="">2nd Shift</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>DA%</label>
+                            <input type="text" placeholder="Enter your DA%">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Faculty Shift</label>
+                            <select id="faculty_shift" name="" required>
+                                <option value="ug">UG</option>
+                                <option value="pg">PG</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Appointment approved by Government</label>
+                            <select id="government" name="" required>
+                                <option value="ug">Not applicable</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Appointment approved by University</label>
+                            <select id="university" name="" required>
+                                <option value="ratified">Ratified</option>
+                                <option value="not_ratified">Not Ratified</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Salary mode</label>
+                            <select id="salary_mode" name="" required>
+                                <option value="bank_account">Credit to Bank Account</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Joining</label>
+                            <input type="date" placeholder="Enter your date of joining">
+                        </div>
+
+                        <div class="input-field">
+                            <label>HRA in Rs.</label>
+                            <input type="number" placeholder="Enter your scale of pay">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Gross Pay per month</label>
+                            <input type="number" placeholder="Enter your gross pay per month">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Pay Scale</label>
+                            <input type="number" placeholder="Enter your pay scale">
+                        </div>
+
+                        <div class="input-field">
+                            <label>PF Number</label>
+                            <input type="number" placeholder="Enter your PF number">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Basic pay in Rs.</label>
+                            <input type="number" placeholder="Enter your basic pay">
+                        </div>
+
+
+                    </div>
+                </div>
+        </form>
+        </div>
+        <button class="btn btn-info">Submit</button>
+
+
+        <style>
+            /* ===== Google Font Import - Poppins ===== */
+            
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+            }
+            
+            .form.first {
+                overflow-x: hidden;
+            }
+            
+            body {
+                min-height: 300vh;
+                align-items: center;
+                justify-content: center;
+                background: #dcdbd7;
+            }
+            
+            .container {
+                position: relative;
+                max-width: 1400px;
+                width: 100%;
+                border-radius: 10px;
+                padding: 30px;
+                margin: auto;
+                background-color: #fff;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .container header {
+                position: relative;
+                font-size: 20px;
+                font-weight: 600;
+                color: #333;
+            }
+            
+            .container header::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                height: 3px;
+                width: 27px;
+                border-radius: 8px;
+                background-color: #4070f4;
+            }
+            
+            .form.first {
+                overflow-x: hidden;
+                overflow-y: scroll;
+            }
+            
+            .container form {
+                position: relative;
+                margin-top: 16px;
+                min-height: 490px;
+                background-color: #fff;
+                overflow: hidden;
+            }
+            
+            .container form .form {
+                position: absolute;
+                background-color: #fff;
+                transition: 0.3s ease;
+            }
+            
+            .container form .form.second {
+                opacity: 0;
+                pointer-events: none;
+                transform: translateX(100%);
+            }
+            
+            form.secActive .form.second {
+                opacity: 1;
+                pointer-events: auto;
+                transform: translateX(0);
+            }
+            
+            form.secActive .form.first {
+                opacity: 0;
+                pointer-events: none;
+                transform: translateX(-100%);
+            }
+            
+            .container form .title {
+                display: block;
+                margin-bottom: 8px;
+                font-size: 16px;
+                font-weight: 500;
+                margin: 6px 0;
+                color: #333;
+            }
+            
+            .container form .fields {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            
+            form .fields .input-field {
+                display: flex;
+                width: calc(100% / 5 - 15px);
+                flex-direction: column;
+                margin: 4px 0;
+            }
+            
+            .input-field label {
+                font-size: 12px;
+                font-weight: 500;
+                color: #2e2e2e;
+            }
+            
+            .form {
+                overflow-x: hidden;
+                overflow-y: auto;
+                background-color: aquamarine;
+            }
+            
+            .input-field input,
+            select {
+                outline: none;
+                font-size: 14px;
+                font-weight: 400;
+                color: #333;
+                border-radius: 5px;
+                border: 1px solid #aaa;
+                padding: 0 15px;
+                height: 42px;
+                margin: 8px 0;
+            }
+            
+            .input-field input :focus,
+            .input-field select:focus {
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+            }
+            
+            .input-field select,
+            .input-field input[type="date"] {
+                color: #707070;
+            }
+            
+            .input-field input[type="date"]:valid {
+                color: #333;
+            }
+            
+            .container form .btnText {
+                font-size: 14px;
+                font-weight: 400;
+            }
+            
+            @media (max-width: 750px) {
+                .container form {
+                    overflow-y: scroll;
+                }
+                .container form::-webkit-scrollbar {
+                    display: none;
+                }
+                form .fields .input-field {
+                    width: calc(100% / 2 - 15px);
+                }
+            }
+            
+            @media (max-width: 550px) {
+                form .fields .input-field {
+                    width: 100%;
+                }
+            }
+            
+            .tags-input-wrapper {
+                background: transparent;
+                padding: 10px;
+                border-radius: 4px;
+                max-width: 4000px;
+                border: 1px solid #ccc
+            }
+            
+            .tags-input-wrapper input {
+                border: none;
+                background: transparent;
+                outline: none;
+                width: 140px;
+                margin-left: 8px;
+            }
+            
+            .tags-input-wrapper .tag {
+                display: inline-block;
+                background-color: #0c0b0e;
+                color: white;
+                border-radius: 40px;
+                padding: 0px 3px 0px 7px;
+                margin-right: 5px;
+                margin-bottom: 5px;
+                box-shadow: 0 5px 15px -2px rgba(14, 14, 14, 0.7)
+            }
+            
+            .tags-input-wrapper .tag a {
+                margin: 0 7px 3px;
+                display: inline-block;
+                cursor: pointer;
+            }
+            
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgb(6, 6, 6);
+            }
+            
+            li {
+                float: left;
+            }
+            
+            li a {
+                display: block;
+                color: #ffffff;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            
+            li a:hover {
+                background-color: rgb(13, 199, 241);
+                transform: translateY(-5px);
+            }
+            
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            
+            th,
+            td {
+                padding: 10px;
+            }
+            
+            .divscroll {
+                overflow-x: scroll;
+            }
+        </style>
+        <script language="Javascript">
+            function CheckDimension() {
+                //Get reference of File.
+                var fileUpload = document.getElementById("file");
+
+                //Check whether the file is valid Image.
+                var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(.jpg|.png|.gif)$");
+                if (regex.test(fileUpload.value.toLowerCase())) {
+
+                    //Check whether HTML5 is supported.
+                    if (typeof(fileUpload.files) != "undefined") {
+                        //Initiate the FileReader object.
+                        var reader = new FileReader();
+                        //Read the contents of Image File.
+                        reader.readAsDataURL(fileUpload.files[0]);
+                        reader.onload = function(e) {
+                            //Initiate the JavaScript Image object.
+                            var image = new Image();
+
+                            //Set the Base64 string return from FileReader as source.
+                            image.src = e.target.result;
+
+                            //Validate the File Height and Width.
+                            image.onload = function() {
+                                var height = this.height;
+                                var width = this.width;
+                                if (height > 2 || width > 2) {
+
+                                    //show width and height to user
+                                    document.getElementById("width").innerHTML = width;
+                                    document.getElementById("height").innerHTML = height;
+                                    alert("Height and Width must not exceed 200px.");
+                                    return false;
+                                }
+                                alert("Uploaded image has valid Height and Width.");
+                                return true;
+                            };
+
+                        }
+                    } else {
+                        alert("This browser does not support HTML5.");
+                        return false;
+                    }
+                } else {
+                    alert("Please select a valid Image file.");
+                    return false;
+                }
+            }
+
+
+
+            (function() {
+
+                "use strict"
+
+
+                // Plugin Constructor
+                var TagsInput = function(opts) {
+                    this.options = Object.assign(TagsInput.defaults, opts);
+                    this.init();
+                }
+
+                // Initialize the plugin
+                TagsInput.prototype.init = function(opts) {
+                    this.options = opts ? Object.assign(this.options, opts) : this.options;
+
+                    if (this.initialized)
+                        this.destroy();
+
+                    if (!(this.orignal_input = document.getElementById(this.options.selector))) {
+                        console.error("tags-input couldn't find an element with the specified ID");
+                        return this;
+                    }
+
+                    this.arr = [];
+                    this.wrapper = document.createElement('div');
+                    this.input = document.createElement('input');
+                    init(this);
+                    initEvents(this);
+
+                    this.initialized = true;
+                    return this;
+                }
+
+                // Add Tags
+                TagsInput.prototype.addTag = function(string) {
+
+                    if (this.anyErrors(string))
+                        return;
+
+                    this.arr.push(string);
+                    var tagInput = this;
+
+                    var tag = document.createElement('span');
+                    tag.className = this.options.tagClass;
+                    tag.innerText = string;
+
+                    var closeIcon = document.createElement('a');
+                    closeIcon.innerHTML = '&times;';
+
+                    // delete the tag when icon is clicked
+                    closeIcon.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        var tag = this.parentNode;
+
+                        for (var i = 0; i < tagInput.wrapper.childNodes.length; i++) {
+                            if (tagInput.wrapper.childNodes[i] == tag)
+                                tagInput.deleteTag(tag, i);
+                        }
+                    })
+
+
+                    tag.appendChild(closeIcon);
+                    this.wrapper.insertBefore(tag, this.input);
+                    this.orignal_input.value = this.arr.join(',');
+
+                    return this;
+                }
+
+                // Delete Tags
+                TagsInput.prototype.deleteTag = function(tag, i) {
+                    tag.remove();
+                    this.arr.splice(i, 1);
+                    this.orignal_input.value = this.arr.join(',');
+                    return this;
+                }
+
+                // Make sure input string have no error with the plugin
+                TagsInput.prototype.anyErrors = function(string) {
+                    if (this.options.max != null && this.arr.length >= this.options.max) {
+                        console.log('max tags limit reached');
+                        return true;
+                    }
+
+                    if (!this.options.duplicate && this.arr.indexOf(string) != -1) {
+                        console.log('duplicate found " ' + string + ' " ')
+                        return true;
+                    }
+
+                    return false;
+                }
+
+                // Add tags programmatically 
+                TagsInput.prototype.addData = function(array) {
+                    var plugin = this;
+
+                    array.forEach(function(string) {
+                        plugin.addTag(string);
+                    })
+                    return this;
+                }
+
+                // Get the Input String
+                TagsInput.prototype.getInputString = function() {
+                    return this.arr.join(',');
+                }
+
+
+                // destroy the plugin
+                TagsInput.prototype.destroy = function() {
+                    this.orignal_input.removeAttribute('hidden');
+
+                    delete this.orignal_input;
+                    var self = this;
+
+                    Object.keys(this).forEach(function(key) {
+                        if (self[key] instanceof HTMLElement)
+                            self[key].remove();
+
+                        if (key != 'options')
+                            delete self[key];
+                    });
+
+                    this.initialized = false;
+                }
+
+                // Private function to initialize the tag input plugin
+                function init(tags) {
+                    tags.wrapper.append(tags.input);
+                    tags.wrapper.classList.add(tags.options.wrapperClass);
+                    tags.orignal_input.setAttribute('hidden', 'true');
+                    tags.orignal_input.parentNode.insertBefore(tags.wrapper, tags.orignal_input);
+                }
+
+                // initialize the Events
+                function initEvents(tags) {
+                    tags.wrapper.addEventListener('click', function() {
+                        tags.input.focus();
+                    });
+
+
+                    tags.input.addEventListener('keydown', function(e) {
+                        var str = tags.input.value.trim();
+
+                        if (!!(~[9, 13, 188].indexOf(e.keyCode))) {
+                            e.preventDefault();
+                            tags.input.value = "";
+                            if (str != "")
+                                tags.addTag(str);
+                        }
+
+                    });
+                }
+
+
+                // Set All the Default Values
+                TagsInput.defaults = {
+                    selector: '',
+                    wrapperClass: 'tags-input-wrapper',
+                    tagClass: 'tag',
+                    max: null,
+                    duplicate: false
+                }
+
+                window.TagsInput = TagsInput;
+
+            })();
+
+            var tagInput1 = new TagsInput({
+                selector: 'tag-input1',
+                duplicate: false,
+                max: 10
+            });
+            tagInput1.addData([])
+            var tagInput2 = new TagsInput({
+                selector: 'tag-input2',
+                duplicate: false,
+                max: 10
+            });
+            tagInput2.addData([])
+            var tagInput3 = new TagsInput({
+                selector: 'tag-input3',
+                duplicate: false,
+                max: 10
+            });
+            tagInput3.addData([])
+            var tagInput4 = new TagsInput({
+                selector: 'tag-input4',
+                duplicate: false,
+                max: 10
+            });
+            tagInput4.addData([])
+            var tagInput5 = new TagsInput({
+                selector: 'tag-input5',
+                duplicate: false,
+                max: 10
+            });
+            tagInput5.addData([])
+            var tagInput6 = new TagsInput({
+                selector: 'tag-input6',
+                duplicate: false,
+                max: 10
+            });
+            tagInput6.addData([])
+            var tagInput7 = new TagsInput({
+                selector: 'tag-input7',
+                duplicate: false,
+                max: 10
+            });
+            tagInput7.addData([])
+            var tagInput8 = new TagsInput({
+                selector: 'tag-input8',
+                duplicate: false,
+                max: 10
+            });
+            tagInput8.addData([])
+            var tagInput9 = new TagsInput({
+                selector: 'tag-input9',
+                duplicate: false,
+                max: 10
+            });
+            tagInput9.addData([])
+
+
+            function add(type) {
+
+                //Create an input type dynamically.
+                var element = document.createElement("input");
+
+                //Assign different attributes to the element.
+                element.setAttribute("text", type);
+
+
+                var foo = document.getElementById("fooBar");
+
+                //Append the element in page (in span).
+                foo.appendChild(element);
+
+            }
+
+            function namevalid(id) {
+                var name = document.getElementById(id).value;
+                for (i = 0; i < name.length; i++) {
+                    ch = name.charAt(i);
+                    if (!(ch >= 'a' && ch <= 'z') && !(ch >= 'A' && ch <= 'Z') && !(ch == ' ')) {
+                        alert('Only spaces and letters are allowed');
+                        document.getElementById(id).value = "";
+                    }
+                }
+
+            }
+
+
+            function pincodevalid(id) {
+                var regName = /^[1-9]{1}[0-9]{5}$/;
+                var name = document.getElementById(id).value;
+                if (!regName.test(name)) {
+                    alert('Enter valid postal code');
+                    document.getElementById(id).value = "";
+                }
+            }
+
+            function aadharvalid(id) {
+                var regName = /^[2-9]{1}[0-9]{11}$/;
+                var name = document.getElementById(id).value;
+                if (!regName.test(name)) {
+                    alert('Enter valid Aadhar number');
+                    document.getElementById(id).value = "";
+                }
+            }
+
+            function pannumbervalid(id) {
+                var regName = /[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+                var name = document.getElementById(id).value;
+                if (!regName.test(name)) {
+                    alert('Enter valid Pan number');
+                    document.getElementById(id).value = "";
+                }
+            }
+
+            function mobilevalid(id) {
+                var regName = /[5-9]{1}[0-9]{9}$/;
+                var name = document.getElementById(id).value;
+                if (!regName.test(name)) {
+                    alert('Enter valid mobile number');
+                    document.getElementById(id).value = "";
+                }
+            }
+        </script>
+</body>
+
+</html>
